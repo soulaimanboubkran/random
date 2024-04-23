@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 
 import cors from 'cors'
 import Book from './Models/Book.model.js';
+import { SignIn, SignUp } from './controllers/Auth.controller.js';
 
 dotenv.config()
 
@@ -129,4 +130,9 @@ app.get('/api/book/genre/:genre', async (req, res) => {
       res.status(500).json({ message: error.message });
     }
   });
+  
+  app.post('/api/auth/inscription', SignUp);
+
+  app.post('/api/auth/connexion', SignIn);
+
   
