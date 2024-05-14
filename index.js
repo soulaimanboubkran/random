@@ -22,7 +22,7 @@ app.use(cors())
 
 const connectWithRetry = async () => {
     try {
-        await mongoose.connect(process.env.MONGO);
+        await mongoose.connect('mongodb+srv://soulaimansoulb:1234@api.r4yvkb5.mongodb.net/random');
         console.log('Connected to MongoDB');
     } catch (error) {
         console.error('MongoDB connection error:', error);
@@ -41,6 +41,9 @@ app.listen(PORT, ()=> {
 });
 
 
+app.get('/', async (req, res) => {
+ res.json('ssss')
+});
 app.get('/api/book/books', async (req, res) => {
     try {
       const books = await Book.find();

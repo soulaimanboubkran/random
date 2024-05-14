@@ -30,7 +30,6 @@ export const SignUp = async (req,res,next)=>{
         next(error)
     }
 }
-
 export const  SignIn =async (req,res,next)=>{
     const {email,password} = req.body;
 
