@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 5000
-ENV  MONGO=mongodb+srv://soulaimansoulb:1234@api.r4yvkb5.mongodb.net/random
+EXPOSE 4002
+
 
 CMD ["npm" , "run", "start"] 
